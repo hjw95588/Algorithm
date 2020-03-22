@@ -22,7 +22,7 @@ public class FibonacciSeries {
 		
 	}
 	
-	//递归调用 这个n>42就废了 时间太长了
+	//递归调用 这个n>42就废了 时间太长了 时间复杂度n^2
 	public static int recursionMethod(int n){
 		/* n代表第几项
 		 * 1 2 3 4 5 6...n
@@ -36,6 +36,7 @@ public class FibonacciSeries {
 	   return recursionMethod(n-1)+recursionMethod(n-2);
 	}
 	
+	//时间复杂度n
 	public static int commonMethod(int n){
 		int first=1;
 		int second=1;
