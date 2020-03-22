@@ -50,9 +50,18 @@ public class FibonacciSeries {
 		int first=1;
 		int second=1;
 		for(int x=0;x<n-2;x++){
+			/*
+			 * 第一种
+			 */
 			int sum=first+second;
 			first=second;
 			second=sum;
+			
+			/**
+			 * 第二种省去多余变量
+			 */
+		    second+=first;
+		    first=second-first;
 		}
 		return second;
 	}
