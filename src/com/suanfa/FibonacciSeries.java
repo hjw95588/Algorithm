@@ -3,6 +3,8 @@ package com.suanfa;
 import java.time.Duration;
 import java.time.Instant;
 
+import com.suanfa.TimeTool.Task;
+
 /**
  * 裴波那契数列
  * 
@@ -14,12 +16,19 @@ public class FibonacciSeries {
 
 	public static void main(String[] args) {
 		
-		int n=45;
+		int n=43;
 
-		System.out.println(recursionMethod(n));
+		TimeTool.check("递归调用", new Task(){
+			public void deal() {
+				System.out.println(recursionMethod(n));
+			}
+		});
 		
-		System.out.println(commonMethod(n));
-		
+		TimeTool.check("普通方法", new Task(){
+			public void deal() {
+				System.out.println(commonMethod(n));
+			}
+		});
 	}
 	
 	//递归调用 这个n>42就废了 时间太长了 时间复杂度n^2
