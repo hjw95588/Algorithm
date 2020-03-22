@@ -29,6 +29,12 @@ public class FibonacciSeries {
 				System.out.println(commonMethod(n));
 			}
 		});
+		
+		TimeTool.check("数学公式", new Task(){
+			public void deal() {
+				System.out.println(method3(n));
+			}
+		});
 	}
 	
 	//递归调用 这个n>42就废了 时间太长了 时间复杂度n^2
@@ -53,9 +59,9 @@ public class FibonacciSeries {
 			/*
 			 * 第一种
 			 */
-			int sum=first+second;
+			/*int sum=first+second;
 			first=second;
-			second=sum;
+			second=sum;*/
 			
 			/**
 			 * 第二种省去多余变量
@@ -64,6 +70,16 @@ public class FibonacciSeries {
 		    first=second-first;
 		}
 		return second;
+	}
+	
+	/**
+	 * 数学公式方法
+	 * @param n
+	 * @return
+	 */
+	public static int method3(int n){
+		double c=Math.sqrt(5);
+		return (int)((Math.pow((1+c)/2, n)-Math.pow((1-c)/2, n))/c);
 	}
 	
 	
