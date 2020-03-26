@@ -3,7 +3,7 @@ package com.suanfa;
 public class LinkListMain {
 
 	public static void main(String [] args){
-		LinkList<Integer> list=new LinkList<>();
+		SingleLinkList<Integer> list=new SingleLinkList<>();
 		
 		list.add(0);
 		list.add(1);
