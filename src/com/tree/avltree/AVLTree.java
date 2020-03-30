@@ -30,7 +30,7 @@ public class AVLTree<E> extends BST<E> {
 
     /**
      * 恢复平衡
-     * @param node 高度最低的那个不平衡节点
+     * @param grand 高度最低的那个不平衡节点
      */
     private void rebalance(Node<E> grand){
         Node<E> parent=((AVLNode<E>)grand).tallerChild();
@@ -82,7 +82,7 @@ public class AVLTree<E> extends BST<E> {
 
     /**
      * 恢复平衡 第二种方法
-     * @param node 高度最低的那个不平衡节点
+     * @param grand 高度最低的那个不平衡节点
      */
     private void rebalance2(Node<E> grand){
         Node<E> parent=((AVLNode<E>)grand).tallerChild();
@@ -107,6 +107,7 @@ public class AVLTree<E> extends BST<E> {
     }
 
     //统一处理旋转  参数有点像中序遍历的意思
+    //这里a,g其实可以不用处理，针对于AVL,红黑树
     private void rotate(
             //之前的根节点
             Node<E> beforeRootNode,
