@@ -19,19 +19,19 @@ public class FibonacciSeries {
 		int n=43;
 
 		TimeTool.check("递归调用", new Task(){
-			public void deal() {
+			public void showConsumeTime() {
 				System.out.println(recursionMethod(n));
 			}
 		});
 		
 		TimeTool.check("普通方法", new Task(){
-			public void deal() {
+			public void showConsumeTime() {
 				System.out.println(commonMethod(n));
 			}
 		});
 		
 		TimeTool.check("数学公式", new Task(){
-			public void deal() {
+			public void showConsumeTime() {
 				System.out.println(method3(n));
 			}
 		});
