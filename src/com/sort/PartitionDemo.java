@@ -31,7 +31,7 @@ package com.sort;
  */
 public class PartitionDemo {
     public static void main(String [] args) {
-    	int arrs[]= {7,6,-1,-2,3,-5,5,23,6,5,4,6,-2,8,10,11,-43};
+    	int arrs[]= {2,4,6,8,10,12,1,5,3,7,5,14,5,0};
     	int news[]=partition(arrs, 0, arrs.length-1, 5);
     	System.out.println();
     }
@@ -63,6 +63,7 @@ public class PartitionDemo {
     	
     	printArrs(arrs);
     	
+    	//返回2个数，1个数等于的左边界，另一个数是等于的右边界
     	return new int[] {left+1,right-1};
     	
     }
