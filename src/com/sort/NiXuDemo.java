@@ -16,7 +16,7 @@ public class NiXuDemo {
 
 	static List<String> list=new ArrayList<String>(); 
 	public static void main(String[] args) {
-		
+		System.out.println(111);
 		int arrs[]={7,9,8,1,2,6,5,4};
 	        TimeTool.check("共计耗时",()->{
 	        	mergeSortTest(arrs);
