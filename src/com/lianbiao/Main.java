@@ -3,7 +3,7 @@ package com.lianbiao;
 public class Main {
    public static void testList(List<Integer> list) {
 
-     System.out.println(1111);
+     System.out.println(6666);
         list.add(11);
         list.add(22);
         list.add(33);
